@@ -1,0 +1,3 @@
+- insert:
+    - id: dsh-model-request-stats
+      name: 'dsh-model-request-stats'
