@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Model request statistics",
+    "description": "Shows how many times the model was requested in the open session, how many of those attempts failed, a ranked breakdown of the failure reasons, and a whole-request speed. The reading sits in the composer dock below the input box as \"Requests N · Failed M · Overall X tok/s\"; select it to open a panel with the attempt, completed, failed, cancelled, failure-rate, model-time, output-token, overall-speed, and retry counts, per-reason bars, and the latest failure. Figures fold from this session's durable log only — the plugin adds no model requests and no network calls — so they survive reloads, resume, paging, and compaction. Attempts are counted from logged request attempts: a request you cancel is listed as cancelled and does not count as a failure or enter the failure rate, and a failure whose reason never reaches the log appears under \"Reason not recorded\" instead of being guessed. Overall speed divides all output tokens by each request's full wall time, so connection, queueing, retry backoff, and failed waits are all included; the built-in tok/s counts only decoding after the first token. Requires the session projection registry; without it the plugin stays inactive.",
+    "detail": "docs/DETAIL.md"
+  }
+}
