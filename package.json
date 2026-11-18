@@ -1,0 +1,58 @@
+{
+  "name": "dsh-model-request-stats",
+  "version": "0.1.0",
+  "description": "Per-session model request statistics for DeepSeek Harness: attempts, failures, failure reasons, retries, and a whole-request tok/s that counts connection and retry time.",
+  "type": "module",
+  "main": "host.js",
+  "exports": {
+    ".": "./host.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "host.js",
+    "client.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "docs",
+    "icon.svg"
+  ],
+  "engines": {
+    "node": "^22.19.0 || >=24.0.0",
+    "dsh": ">=0.2.0-rc.2 || >=0.2.1-rc.2 || >=0.2.2-rc.1"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation"
+      ]
+    }
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "cordis",
+    "plugin",
+    "stats",
+    "tokens",
+    "throughput",
+    "retry",
+    "observability"
+  ],
+  "homepage": "https://github.com/sjbdhr/dsh-model-request-stats#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sjbdhr/dsh-model-request-stats.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sjbdhr/dsh-model-request-stats/issues"
+  },
+  "author": "sjbdhr",
+  "license": "MIT"
+}
